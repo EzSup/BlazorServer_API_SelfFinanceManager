@@ -9,7 +9,22 @@
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
         <MudText Typo="Typo.h5" Class="ml-3">Self finance manager</MudText>
         <MudSpacer />
-        <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
+        <MudMenu>
+            <ActivatorContent>
+                <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
+            </ActivatorContent>
+            <ChildContent >
+                <MudMenuItem>
+                    <MudPaper Class="d-flex align-content-lg-stretch gap-4" Elevation="0">
+                        <MudAvatar Size="Size.Small">
+                            <MudImage Src="images\vozya.jpg"></MudImage>
+                        </MudAvatar> <MudText>Андрюха Мармелад</MudText>
+                    </MudPaper>                    
+                </MudMenuItem>
+                <MudMenuItem>Sign Out</MudMenuItem>
+            </ChildContent>
+        </MudMenu>
+        
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
         <NavMenu/>
